@@ -13,10 +13,13 @@ app.use(webpackHotMiddleware(compiler))
 
 app.use(express.static('public'));
 
-app.get('/', function (req, res) {
-  let lol = "q";
-  res.sendFile("./public/index.html");
+app.get('*', function (req, res) {
+  res.sendFile("./public/index.html", { root: __dirname });
 });
+
+// app.get('/search', function (req, res) {
+//   res.sendFile("./public/index.html", { root: __dirname });
+// });
 
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');

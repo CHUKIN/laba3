@@ -1,0 +1,12 @@
+export const SET_MARK = 'SET_MARK';
+export const SET_MODEL = 'SET_MODEL';
+export const SET_YEAR = 'SET_YEAR';
+export const SET_COST = 'SET_COST';
+export const SET_VALUTA = 'SET_VALUTA';
+export const SET_TRANSMISSION = 'SET_TRANSMISSION';
+export const SET_TYPE = 'SET_TYPE';
+export const SET_MILEAGE = 'SET_MILEAGE';
+export const SET_AMOUNT = 'SET_AMOUNT';
+export const CLEAR = 'CLEAR';
+export const GET_PHOTOS_REQUEST = 'GET_PHOTOS_REQUEST'
+export const GET_PHOTOS_SUCCESS = 'GET_PHOTOS_SUCCESS'
