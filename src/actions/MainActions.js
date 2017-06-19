@@ -1,5 +1,4 @@
-// import {GET_PHOTOS_REQUEST,
-//   GET_PHOTOS_SUCCESS, SET_MARK, SET_MODEL, SET_YEAR, SET_COST, SET_VALUTA, SET_TRANSMISSION, SET_TYPE, SET_MILEAGE, SET_AMOUNT, CLEAR } from '../constants/Search'
+import {GET_POPULAR_CARS_SUCCESS,GET_POPULAR_CARS_REQUEST } from '../constants/Main'
 
 // export function setMark(event,data) {
 //   return {
@@ -11,19 +10,29 @@
 
 
 
-export function getPhotoss() {
+export function getPopularCars() {
 
   return (dispatch) => {
     dispatch({
-      type: "GET_PHOTOS_REQUEST",
-      year: 1999
+      type: GET_POPULAR_CARS_REQUEST,
     })
 
-    setTimeout(() => {
-      dispatch({
-        type: "GET_PHOTOS_SUCCESS",
-        photos: [1,2,3,4,5]
-      })
-    }, 1000)
+
+      fetch('http://localhost:3000/api/mostpopularcars')
+  .then(function(response) {
+    return response.json();
+   })
+  .then(function(data) {
+    dispatch({
+         type: GET_POPULAR_CARS_SUCCESS,
+         cars: data
+       })
+  })
+
+
+
+
+
+
   }
 }

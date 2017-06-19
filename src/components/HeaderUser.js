@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link, HashRouter,Switch,Route, BrowserRouter} from 'react-router-dom'
 
-class Header extends React.Component {
+class HeaderUser extends React.Component {
     render () {
         return <div>
             <ul>
@@ -12,4 +12,4 @@ class Header extends React.Component {
     }
 }
 
-export default Header;
+export default HeaderUser;
