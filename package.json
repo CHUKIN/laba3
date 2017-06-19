@@ -1,0 +1,50 @@
+{
+  "name": "laba3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CHUKIN/laba3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CHUKIN/laba3/issues"
+  },
+  "homepage": "https://github.com/CHUKIN/laba3#readme",
+  "dependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2017": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "css-loader": "^0.28.4",
+    "express": "^4.15.3",
+    "file-loader": "^0.11.2",
+    "history": "^4.6.2",
+    "material-ui": "^0.18.3",
+    "opn": "^5.1.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "react-router-redux": "^4.0.8",
+    "react-tap-event-plugin": "^2.0.1",
+    "redux": "^3.7.0",
+    "redux-thunk": "^2.2.0",
+    "semantic-ui-css": "^2.2.10",
+    "semantic-ui-react": "^0.68.5",
+    "style-loader": "^0.18.2",
+    "webpack": "^2.6.1",
+    "webpack-dev-middleware": "^1.10.2",
+    "webpack-hot-middleware": "^2.18.0"
+  }
+}
