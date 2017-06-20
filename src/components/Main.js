@@ -1,7 +1,7 @@
 import React from 'react';
 import MostPopularCars from './MostPopularCars'
 import HeaderUser from './HeaderUser'
-
+import 'semantic-ui-css/semantic.min.css';
 class Main extends React.Component {
 
     componentDidMount(){
@@ -12,7 +12,11 @@ class Main extends React.Component {
     render () {
         return <div>
             <HeaderUser/>
-            <MostPopularCars cars={this.props.main.cars}/>
+            
+                    <div className="ui grid">
+                        <MostPopularCars cars={this.props.main.cars} MainActions={this.props.MainActions} main={this.props.main} />
+
+</div>
         </div> 
     }
 }

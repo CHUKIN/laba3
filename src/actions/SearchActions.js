@@ -73,7 +73,7 @@ export function setClear() {
     year:1950,
     amount:0,
     mileage:0,
-    enginesType:"",
+    enginesType:false,
     transmission:"",
     valuta:""
   }

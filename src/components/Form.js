@@ -5,20 +5,14 @@ import 'semantic-ui-css/semantic.min.css';
 import Slider from 'material-ui/Slider';
 import { Button } from 'semantic-ui-react'
 import HeaderUser from './HeaderUser'
+import {Grid,Row,Col} from 'react-bootstrap/lib/';
+
 class Form extends React.Component {
 
     
 
     render () {
-        return <div><HeaderUser/> <div className="form">
-            <button className='btn' onClick={this.props.handles.getPhotos}>2016</button>
-                      <h1>{this.props.info.year}</h1>
-                        {
-        this.props.info.fetching ?
-        <p>Загрузка...</p>
-        :
-        <p>У тебя {this.props.info.photos.length} фото.</p>
-      }
+        return <div><div className="form">
             <form onSubmit={this.props.handles.submit}>
                 <p>Марка</p>
                 <Dropdown name="mark" placeholder='Выберите марку' value={this.props.info.mark} onChange={this.props.handles.setMark} search selection options={this.props.info.marks} />
