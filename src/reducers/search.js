@@ -1,5 +1,5 @@
 import {GET_PHOTOS_REQUEST,
-  GET_PHOTOS_SUCCESS, SET_MARK, SET_MODEL, SET_YEAR, SET_COST, SET_VALUTA, SET_TRANSMISSION, SET_TYPE, SET_MILEAGE, SET_AMOUNT , CLEAR} from '../constants/Search'
+  GET_PHOTOS_SUCCESS, SET_MARK, SET_MODEL, SET_YEAR, SET_COST, SET_VALUTA, SET_TRANSMISSION, SET_TYPE, SET_MILEAGE, SET_AMOUNT , CLEAR,GET_CARS} from '../constants/Search'
 
 const initialState = {
   mark : "",
@@ -20,40 +20,40 @@ const initialState = {
   fetching: false,
   photos: [],
   cars: [
-      {id:1,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:2,mark:"Нисан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:3,mark:"Лифан",model:"ЛифаноНовая",year:2000,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:4,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:2000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:5,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Ручное",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:6,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Дизель",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:7,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:30000,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:8,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:5,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-       {id:9,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:10,mark:"Нисан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:11,mark:"Лифан",model:"ЛифаноНовая",year:2000,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:12,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:2000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:13,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Ручное",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:14,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Дизель",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:15,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:30000,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:16,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:5,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:1,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:2,mark:"Нисан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:3,mark:"Лифан",model:"ЛифаноНовая",year:2000,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:4,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:2000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:5,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Ручное",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:6,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Дизель",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:7,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:30000,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:8,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:5,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      //  {id:9,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:10,mark:"Нисан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:11,mark:"Лифан",model:"ЛифаноНовая",year:2000,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:12,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:2000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:13,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Ручное",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:14,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Дизель",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:15,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:30000,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:16,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:5,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
   ],
   filteredCars: [
-      {id:1,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:2,mark:"Нисан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:3,mark:"Лифан",model:"ЛифаноНовая",year:2000,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:4,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:2000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:5,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Ручное",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:6,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Дизель",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:7,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:30000,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:8,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:5,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-       {id:9,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:10,mark:"Нисан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:11,mark:"Лифан",model:"ЛифаноНовая",year:2000,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:12,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:2000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:13,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Ручное",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:14,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Дизель",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:15,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:30000,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:16,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:5,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:1,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:2,mark:"Нисан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:3,mark:"Лифан",model:"ЛифаноНовая",year:2000,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:4,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:2000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:5,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Ручное",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:6,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Дизель",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:7,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:30000,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:8,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:5,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      //  {id:9,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:10,mark:"Нисан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:11,mark:"Лифан",model:"ЛифаноНовая",year:2000,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:12,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:2000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:13,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Ручное",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:14,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Дизель",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:15,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:30000,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      // {id:16,mark:"Лифан",model:"ЛифаноНовая",year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:5,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
   ],
 }
 
@@ -109,6 +109,9 @@ export default function search(state = initialState, action) {
 
     case GET_PHOTOS_SUCCESS:
       return { ...state, photos: action.photos, fetching: false }
+
+      case GET_CARS:
+      return { ...state, cars: action.cars, filteredCars:action.cars }
 
     default:
       return state;

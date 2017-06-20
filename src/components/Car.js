@@ -10,6 +10,7 @@ componentDidMount(){
     }
 
 
+
     render () {
         return  <Grid.Column  className="carCars">
             <div onClick={this.showCar}>
@@ -23,7 +24,9 @@ componentDidMount(){
         <p>Трансмиссия: {this.props.car.transmission}</p>
         <p>Тип двигателя: {this.props.car.enginesType}</p>
         <p>Пробег: {this.props.car.mileage}</p>
-        <p>Объём двигателя: {this.props.car.amount}</p></Col>
+        <p>Объём двигателя: {this.props.car.amount}</p>
+        <p>Просмотры: {this.props.car.watch}</p></Col>
+        
     </Row>
         </div>
       </Grid.Column>

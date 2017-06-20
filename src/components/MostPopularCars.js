@@ -5,7 +5,7 @@ import CarCars from './CarCars'
 class MostPopularCars extends React.Component {
     render () {
         
-        const listCars = this.props.cars.map((car) =>   <div className="three wide column"> <Grid.Row key={car.id.toString()}>  <CarCars car={car} MainActions={this.props.MainActions} main={this.props.main}/>     </Grid.Row> </div>);
+        const listCars = this.props.cars.map((car) =>   <div className="three wide column" key={car.id.toString()}> <Grid.Row   >  <CarCars car={car} MainActions={this.props.MainActions} main={this.props.main}/>     </Grid.Row> </div>);
 
        return <div >
        

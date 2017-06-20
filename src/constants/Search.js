@@ -10,3 +10,4 @@ export const SET_AMOUNT = 'SET_AMOUNT';
 export const CLEAR = 'CLEAR';
 export const GET_PHOTOS_REQUEST = 'GET_PHOTOS_REQUEST'
 export const GET_PHOTOS_SUCCESS = 'GET_PHOTOS_SUCCESS'
+export const GET_CARS = 'GET_CARS'

@@ -32,6 +32,7 @@ class Cars extends React.Component {
         <p>Тип двигателя: {this.props.car.enginesType}</p>
         <p>Пробег: {this.props.car.mileage}</p>
         <p>Объём двигателя: {this.props.car.amount}</p>
+         <p>Просмотры: {this.props.car.watch}</p>
         </Link>
         </div>
       </Grid.Column>

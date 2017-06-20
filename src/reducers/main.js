@@ -1,4 +1,4 @@
-import {GET_POPULAR_CARS_SUCCESS,GET_POPULAR_CARS_REQUEST,SET_CAR,GET_CAR ,SET_MARK,SET_MODEL, SET_YEAR, SET_COST,  SET_TRANSMISSION, SET_TYPE, SET_MILEAGE, SET_AMOUNT} from '../constants/Main'
+import {GET_POPULAR_CARS_SUCCESS,GET_POPULAR_CARS_REQUEST,SET_CAR,GET_CAR ,SET_MARK,SET_MODEL, SET_YEAR, SET_COST,  SET_TRANSMISSION, SET_TYPE, SET_MILEAGE, SET_AMOUNT,SET_PHOTO} from '../constants/Main'
 
 const initialState = {
   cars: [
@@ -34,6 +34,8 @@ const initialState = {
              "Лифан": [ { key: 'ЛифаноНовая', value: 'ЛифаноНовая', text: 'ЛифаноНовая' },{ key: 'ЛифанСтарая', value: 'ЛифанСтарая', text: 'ЛифанСтарая' }], 
          "Нисан":[ { key: 'НисанНовая', value: 'НисанНовая', text: 'НисанНовая' },{ key: 'НисанСтарая', value: 'НисанСтарая', text: 'НисанСтарая' }]} ,
   currentModels: [],
+  photo:"",
+  watch:0
 }
 
 
@@ -55,7 +57,7 @@ export default function main(state = initialState, action) {
       return { ...state, car:action.car }
 
        case GET_CAR:
-      return { ...state, car:action.car, mark:action.mark,model:action.model ,currentModels: state.models[action.mark],cost:action.cost, year:action.year, transmission:action.transmission, enginesType:action.enginesType, mileage:action.mileage, amount:action.amount}
+      return { ...state, car:action.car, mark:action.mark,model:action.model ,currentModels: state.models[action.mark],cost:action.cost, year:action.year, transmission:action.transmission, enginesType:action.enginesType, mileage:action.mileage, amount:action.amount,photo:action.photo,watch:action.watch}
 
          case SET_MARK:
       return { ...state, mark:action.mark ,currentModels: state.models[action.mark]}
@@ -80,6 +82,9 @@ export default function main(state = initialState, action) {
 
        case SET_AMOUNT:         
       return { ...state, amount: action.amount }
+
+       case SET_PHOTO:         
+      return { ...state, photo: action.photo }
 
     default:
       return state;

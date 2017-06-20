@@ -1,5 +1,5 @@
 import {GET_PHOTOS_REQUEST,
-  GET_PHOTOS_SUCCESS, SET_MARK, SET_MODEL, SET_YEAR, SET_COST, SET_VALUTA, SET_TRANSMISSION, SET_TYPE, SET_MILEAGE, SET_AMOUNT, CLEAR } from '../constants/Search'
+  GET_PHOTOS_SUCCESS, SET_MARK, SET_MODEL, SET_YEAR, SET_COST, SET_VALUTA, SET_TRANSMISSION, SET_TYPE, SET_MILEAGE, SET_AMOUNT, CLEAR,GET_CARS } from '../constants/Search'
 
 export function setMark(event,data) {
   return {
@@ -96,5 +96,27 @@ export function getPhotos() {
     }, 1000)
 
   
+  }
+}
+
+
+export function getCars() {
+
+  return (dispatch) => {
+
+
+
+      fetch('http://localhost:3000/api/cars')
+  .then(function(response) {
+    //console.log(response);
+    return response.json();
+   })
+  .then(function(data) {
+    //console.log(data);
+    dispatch({
+         type: GET_CARS,
+         cars: data
+       })
+  })
   }
 }

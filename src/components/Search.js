@@ -6,6 +6,11 @@ import {Grid,Row,Col} from 'react-bootstrap/lib/';
 
 
 class Search extends React.Component {
+
+      componentDidMount(){
+            this.props.SearchActions.getCars();
+    }
+
     render () {
         return <div>
             <HeaderUser/>

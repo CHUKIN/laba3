@@ -10,3 +10,4 @@ export const SET_TRANSMISSION = 'SET_TRANSMISSION';
 export const SET_TYPE = 'SET_TYPE';
 export const SET_MILEAGE = 'SET_MILEAGE';
 export const SET_AMOUNT = 'SET_AMOUNT';
+export const SET_PHOTO = 'SET_PHOTO';
