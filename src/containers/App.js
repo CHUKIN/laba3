@@ -17,34 +17,27 @@ import { Router, IndexRoute, browserHistory, Redirect  } from 'react-router'
 import createHistory from 'history/createBrowserHistory'
 import {Link, HashRouter,Switch,Route, BrowserRouter} from 'react-router-dom'
 
-
 const history = createHistory()
 
 
 class App extends Component {
-    
-
+  
     render () {
-        return  <BrowserRouter browserHistory={history}>
-        
-    <div>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"/>
-      <Route exact path="/"  render={()=><Main {...this.props}/>} />
-      <Route path="/search" render={()=><Search {...this.props}/>}/>
-      <Route path="/admin" render={()=><Admin {...this.props}/>}/>
-      <Route path="/add" render={()=><AddCar {...this.props}/>}/>
-      <Route path="/car:id" render={({match})=><Car {...this.props} id={match.params.id} car={this.props.main.car}/>}/>
-      <Route path="/change:id" render={({match})=><ChangeCar {...this.props} id={match.params.id}/>}/>
-       <Route path="/delete:id" render={({match})=><DeleteCar {...this.props} id={match.params.id}/>}/>
-
-      
-    </div>
-  </BrowserRouter>
-    }
+        return  <BrowserRouter browserHistory={history}>    
+                    <div>
+                        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"/>
+                        <Route exact path="/"  render={()=><Main {...this.props}/>} />
+                        <Route path="/search" render={()=><Search {...this.props}/>}/>
+                        <Route path="/admin" render={()=><Admin {...this.props}/>}/>
+                        <Route path="/add" render={()=><AddCar {...this.props}/>}/>
+                        <Route path="/car:id" render={({match})=><Car {...this.props} id={match.params.id} car={this.props.main.car}/>}/>
+                        <Route path="/change:id" render={({match})=><ChangeCar {...this.props} id={match.params.id}/>}/>
+                        <Route path="/delete:id" render={({match})=><DeleteCar {...this.props} id={match.params.id}/>}/> 
+                    </div>
+                </BrowserRouter>
+      }
         
 }
-
-
 
 function mapStateToProps(state) {
   return {

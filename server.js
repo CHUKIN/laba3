@@ -15,30 +15,33 @@ app.use(express.static('public'));
 
 let cars= [
       {id:1,mark:"Лифан",model:"ЛифаноНовая",watch:101,year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:2,mark:"Нисан",model:"ЛифаноНовая",watch:100,year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:3,mark:"Лифан",model:"ЛифаноНовая",watch:100,year:2000,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:4,mark:"Лифан",model:"ЛифаноНовая",watch:100,year:1950,cost:2000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      {id:2,mark:"Нисан",model:"НисанНовая",watch:100,year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'http://ona-znaet.ru/statii/4/26/2.jpg'},
+      {id:3,mark:"Лифан",model:"ЛифаноНовая",watch:100,year:2000,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'http://ona-znaet.ru/statii/4/26/2.jpg'},
+      {id:4,mark:"Лифан",model:"ЛифаноНовая",watch:100,year:1950,cost:2000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://i.ytimg.com/vi/cFmFACENiGs/maxresdefault.jpg'},
       {id:5,mark:"Лифан",model:"ЛифаноНовая",watch:100,year:1950,cost:1000,transmission:"Ручное",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
       {id:6,mark:"Лифан",model:"ЛифаноНовая",watch:105,year:1950,cost:1000,transmission:"Автоматика",enginesType:"Дизель",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
       {id:7,mark:"Лифан",model:"ЛифаноНовая",watch:100,year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:30000,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:8,mark:"Лифан",model:"ЛифаноНовая",watch:100,year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:5,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      {id:8,mark:"Лифан",model:"ЛифаноНовая",watch:100,year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:5,photo:'https://i.ytimg.com/vi/cFmFACENiGs/maxresdefault.jpg'},
        {id:9,mark:"Лифан",model:"ЛифаноНовая",watch:100,year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:10,mark:"Нисан",model:"ЛифаноНовая",watch:100,year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      {id:10,mark:"Нисан",model:"НисанНовая",watch:100,year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://i.ytimg.com/vi/cFmFACENiGs/maxresdefault.jpg'},
       {id:11,mark:"Лифан",model:"ЛифаноНовая",watch:100,year:2000,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:12,mark:"Лифан",model:"ЛифаноНовая",watch:100,year:1950,cost:2000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      {id:12,mark:"Лифан",model:"ЛифаноНовая",watch:100,year:1950,cost:2000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://i.ytimg.com/vi/cFmFACENiGs/maxresdefault.jpg'},
       {id:13,mark:"Лифан",model:"ЛифаноНовая",watch:110,year:1950,cost:1000,transmission:"Ручное",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:14,mark:"Лифан",model:"ЛифаноНовая",watch:100,year:1950,cost:1000,transmission:"Автоматика",enginesType:"Дизель",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:15,mark:"Лифан",model:"ЛифаноНовая",watch:100,year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:30000,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      {id:14,mark:"Лифан",model:"ЛифаноНовая",watch:100,year:1950,cost:1000,transmission:"Автоматика",enginesType:"Дизель",mileage:100,amount:1,photo:'http://ona-znaet.ru/statii/4/26/2.jpg'},
+      {id:15,mark:"Лифан",model:"ЛифаноНовая",watch:100,year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:30000,amount:1,photo:'http://ona-znaet.ru/statii/4/26/2.jpg'},
       {id:16,mark:"Лифан",model:"ЛифаноНовая",watch:100,year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:5,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:17,mark:"Лифан",model:"ЛифаноНовая",watch:100,year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      {id:17,mark:"Лифан",model:"ЛифаноНовая",watch:100,year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'http://ona-znaet.ru/statii/4/26/2.jpg'},
       {id:18,mark:"Нисан",model:"ЛифаноНовая",watch:100,year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:19,mark:"Лифан",model:"ЛифаноНовая",watch:100,year:2000,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      {id:19,mark:"Лифан",model:"ЛифаноНовая",watch:100,year:2000,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://i.ytimg.com/vi/cFmFACENiGs/maxresdefault.jpg'},
       {id:20,mark:"Лифан",model:"ЛифаноНовая",watch:120,year:1950,cost:2000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:21,mark:"Лифан",model:"ЛифаноНовая",watch:100,year:1950,cost:1000,transmission:"Ручное",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      {id:21,mark:"Лифан",model:"ЛифаноНовая",watch:100,year:1950,cost:1000,transmission:"Ручное",enginesType:"Бензин",mileage:100,amount:1,photo:'http://ona-znaet.ru/statii/4/26/2.jpg'},
       {id:22,mark:"Лифан",model:"ЛифаноНовая",watch:100,year:1950,cost:1000,transmission:"Автоматика",enginesType:"Дизель",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:23,mark:"Лифан",model:"ЛифаноНовая",watch:100,year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:30000,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-      {id:24,mark:"Лифан",model:"ЛифаноНовая",watch:100,year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:5,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
-       {id:25,mark:"Лифан",model:"ЛифаноНовая",watch:100,year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://look.com.ua/pic/201209/1600x900/look.com.ua-19447.jpg'},
+      {id:23,mark:"Лифан",model:"ЛифаноНовая",watch:100,year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:30000,amount:1,photo:'https://a.d-cd.net/409306u-960.jpg'},
+      {id:24,mark:"Лифан",model:"ЛифаноНовая",watch:100,year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:5,photo:'https://a.d-cd.net/409306u-960.jpg'},
+       {id:25,mark:"Нисан",model:"НисанНовая",watch:100,year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://a.d-cd.net/409306u-960.jpg'},
+       {id:26,mark:"Нисан",model:"НисанНовая",watch:100,year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:30000,amount:1,photo:'https://a.d-cd.net/409306u-960.jpg'},
+      {id:27,mark:"Нисан",model:"ЛифаноНовая",watch:100,year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:5,photo:'https://a.d-cd.net/409306u-960.jpg'},
+       {id:28,mark:"Нисан",model:"НисанНовая",watch:100,year:1950,cost:1000,transmission:"Автоматика",enginesType:"Бензин",mileage:100,amount:1,photo:'https://a.d-cd.net/409306u-960.jpg'},
   ];
 
 app.get('/api/cars',function (req, res) {
@@ -71,9 +74,39 @@ app.post('/api/changecar', urlencodedParser, function (request, response) {
 });
 
 
+app.post('/api/addcar', urlencodedParser, function (request, response) {
+
+
+  let id =0;
+
+  for(let i=0;i<cars.length;i++){
+    if(id<cars[i].id){
+      id=cars[i].id;
+    }
+
+    car = {
+      id: id+1,
+      mark: request.query.mark,
+      model: request.query.model,
+      year: request.query.year,
+      cost: request.query.cost,
+      transmission: request.query.transmission,
+      enginesType: request.query.enginesType,
+      amount: request.query.amount,
+      mileage: request.query.mileage,
+      watch: request.query.watch,
+      photo: request.body.photo,
+    }
+  }
+    
+    cars.push(car);
+  
+  response.send(cars);
+});
+
 app.get('/api/deletecar', function (request, response) {
   let newCars=[];
-     for(let i =0;i<cars.length;i++){
+    for(let i =0;i<cars.length;i++){
     if(cars[i].id!=request.query.id){
       newCars.push(cars[i]);
     }
@@ -85,8 +118,6 @@ app.get('/api/deletecar', function (request, response) {
 
 
 app.get('/api/mostpopularcars', function (req, res) {
-
-
 
   cars.sort(function(a,b){
     return b.watch-a.watch;
@@ -104,7 +135,7 @@ app.get('/api/mostpopularcars', function (req, res) {
 
 function findCar(id) {
   let car;
- for(let i = 0 ; i<cars.length;i++){
+  for(let i = 0 ; i<cars.length;i++){
     if (cars[i].id==id){
       car=cars[i];
       break;

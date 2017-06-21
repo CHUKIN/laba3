@@ -6,16 +6,16 @@ class HeaderUser extends React.Component {
     render () {
         return <div>
                  <Navbar inverse collapseOnSelect>
-    <Navbar.Header>
-      <Navbar.Brand>
-        <Link to="/">Главная страница</Link>
-      </Navbar.Brand>
-           <Navbar.Brand>
-        <Link to="/search">Поиск</Link>
-      </Navbar.Brand>
-      <Navbar.Toggle />
-    </Navbar.Header>
-  </Navbar>
+                    <Navbar.Header>
+                      <Navbar.Brand>
+                        <Link to="/">Главная страница</Link>
+                      </Navbar.Brand>
+                          <Navbar.Brand>
+                        <Link to="/search">Поиск</Link>
+                      </Navbar.Brand>
+                      <Navbar.Toggle />
+                    </Navbar.Header>
+                </Navbar>
         </div> 
     }
 }

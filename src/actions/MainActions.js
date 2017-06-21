@@ -65,7 +65,6 @@ export function setMileage(event,data) {
 }
 
 export function setPhoto(data) {
-
   return {
     type: SET_PHOTO,
     photo: data.target.src
@@ -75,20 +74,15 @@ export function setPhoto(data) {
 
 
 export function getPopularCars() {
-
   return (dispatch) => {
     dispatch({
       type: GET_POPULAR_CARS_REQUEST,
     })
-
-
       fetch('http://localhost:3000/api/mostpopularcars')
   .then(function(response) {
-    //console.log(response);
     return response.json();
    })
   .then(function(data) {
-    //console.log(data);
     dispatch({
          type: GET_POPULAR_CARS_SUCCESS,
          cars: data
@@ -97,20 +91,13 @@ export function getPopularCars() {
   }
 }
 
-
-
-
-
 export function getCar(id) {
-
   return (dispatch) => {
       fetch('http://localhost:3000/api/car?id='+id)
   .then(function(response) {
-    //console.log(response);
     return response.json();
    })
   .then(function(data) {
-    //console.log(data);
     dispatch({
          type: GET_CAR,
          car: data,
@@ -130,24 +117,16 @@ export function getCar(id) {
 }
 
 export function deleteCar(id) {
-
   return (dispatch) => {
       fetch('http://localhost:3000/api/deletecar?id='+id)
   .then(function(response) {
-    //console.log(response);
-
    })
   .then(function(data) {
-    //console.log(data);
-
   })
   }
 }
 
 export function changeCar(car) {
-
-  //console.log(car);
-
   return (dispatch) => {
       fetch(`http://localhost:3000/api/changecar?id=${car.id}&mark=${car.mark}&model=${car.model}&year=${car.year}&cost=${car.cost}&watch=${car.watch}&mileage=${car.mileage}&amount=${car.amount}&transmission=${car.transmission}&enginesType=${car.enginesType}`,{  
     method: 'post',  
@@ -157,27 +136,25 @@ export function changeCar(car) {
     body: `photo=${car.photo}` 
   })
   .then(function(response) {
-    //console.log(response);
-
    })
   .then(function(data) {
-    //console.log(data);
-
   })
   }
 }
 
-export function addCar() {
+export function addCar(car) {
 
   return (dispatch) => {
-      fetch('http://localhost:3000/api/addcar')
+      fetch(`http://localhost:3000/api/addcar?mark=${car.mark}&model=${car.model}&year=${car.year}&cost=${car.cost}&watch=${car.watch}&mileage=${car.mileage}&amount=${car.amount}&transmission=${car.transmission}&enginesType=${car.enginesType}`,{  
+    method: 'post',  
+    headers: {  
+      "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"  
+    },  
+    body: `photo=${car.photo}` 
+  })
   .then(function(response) {
-    //console.log(response);
-
    })
   .then(function(data) {
-    //console.log(data);
-
   })
   }
 }
